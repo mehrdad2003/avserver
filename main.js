@@ -13,6 +13,9 @@ const port = process.env.SERVER_PORT;
     res.header('Access-Control-Allow-Origin', '*');
     next();
   });
+  app.get('/',(req,res)=>{
+    rs.send('server is run')
+  })
 app.get("/api/v1/runway/:icao", runwayAPI);
 
 app.listen(port, () => {
