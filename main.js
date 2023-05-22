@@ -14,7 +14,7 @@ const port = process.env.SERVER_PORT;
     next();
   });
   app.get('/',(req,res)=>{
-    rs.send('server is run')
+    res.send('server is run')
   })
 app.get("/api/v1/runway/:icao", runwayAPI);
 
